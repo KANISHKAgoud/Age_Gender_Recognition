@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>AI Gender & Age Detection</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<!-- TOP NAVBAR -->
+<header class="navbar">
+    <h2>🤖 AI Detector</h2>
+</header>
+
+<div class="main">
+
+    <!-- LEFT SIDE -->
+    <div class="left-panel">
+
+        <h1>Age & Gender Detection</h1>
+        <p>Upload an image and get instant predictions using AI.</p>
+
+        <button id="imageBtn" class="upload-btn">Upload Image</button>
+        <input type="file" id="imageInput" accept="image/*" hidden />
+
+        <div class="preview-box">
+            <video id="video" autoplay hidden></video>
+            <canvas id="canvas"></canvas>
+        </div>
+
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="right-panel">
+
+        <h3>Prediction Results</h3>
+
+        <div id="resultBox" class="result-box">
+            No predictions yet
+        </div>
+
+    </div>
+
+</div>
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

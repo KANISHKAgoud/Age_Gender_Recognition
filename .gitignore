@@ -1,0 +1,5 @@
+pvt/
+__pycache__/
+*.pyc
+static/uploads/*
+.cache/
